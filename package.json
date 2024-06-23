@@ -1,27 +1,35 @@
 {
-  "name": "@sudonyms/logger",
-  "version": "0.0.1",
-  "description": "A simple, lightweight console logger with basic formatting capabilities.",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "files": ["./lib/index.js", "./lib/index.d.ts", "./lib/index.js.map"],
-  "scripts": {
-    "test": "npm run build && jest",
-    "build": "npm run clean && tsc",
-    "clean": "rm -rf ./lib",
-    "dev": "tsc --watch"
-  },
-  "author": "TylerDurhamTN <npmjs.runt621@passmail.net> (https://github.com/TylerDurham)",
-  "license": "MIT",
-  "devDependencies": {
-    "ansi_up": "^6.0.2",
-    "jest": "^29.7.0",
-    "nodemon": "^3.1.4",
-    "ts-jest": "^29.1.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.2"
-  },
-  "dependencies": {
-    "ansi-colors": "^4.1.3"
-  }
+    "name": "@sudonyms/logger",
+    "version": "0.0.1",
+    "description": "A simple, lightweight console logger with basic formatting capabilities.",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "files": [
+        "./lib/index.js",
+        "./lib/index.d.ts",
+        "./lib/index.js.map"
+    ],
+    "scripts": {
+        "test": "npm run build && jest",
+        "build": "npm run clean && tsc",
+        "clean": "rm -rf ./lib",
+        "dev": "tsc --watch"
+    },
+    "author": "TylerDurhamTN <npmjs.runt621@passmail.net> (https://github.com/TylerDurham)",
+    "repository": "TylerDurham/logger",
+    "bugs": {
+        "url": "https://github.com/TylerDurham/logger/issues"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "ansi_up": "^6.0.2",
+        "jest": "^29.7.0",
+        "nodemon": "^3.1.4",
+        "ts-jest": "^29.1.5",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.2"
+    },
+    "dependencies": {
+        "ansi-colors": "^4.1.3"
+    }
 }
