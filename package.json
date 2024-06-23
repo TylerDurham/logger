@@ -1,6 +1,6 @@
 {
     "name": "@sudonyms/logger",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A simple, lightweight console logger with basic formatting capabilities.",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
