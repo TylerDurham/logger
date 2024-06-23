@@ -22,7 +22,7 @@ log.error('Notice the color of the prefix.');
 log.info('Notice the "color" of 'text' in quotes.);
 ```
 
-<img src="[Screenshot-1.png](https://github.com/TylerDurham/logger/blob/main/Screenshot-1.png?raw=true)"/>
+<img src="https://github.com/TylerDurham/logger/blob/main/Screenshot-1.png?raw=true"/>
 
 ## F.A.Q.
 
