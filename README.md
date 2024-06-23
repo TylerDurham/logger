@@ -23,7 +23,7 @@ log.info('Notice the "color" of 'text' in quotes.);
 ```
 
  Run your program, and the output should look like the following:
-![Screenshot-1.png](https://github.com/TylerDurham/logger/blob/main/Screenshot-1.png?raw=true)
+![Screenshot-1.png](https://raw.githubusercontent.com/TylerDurham/logger/main/Screenshot-1.png)
 
 ## F.A.Q.
 
