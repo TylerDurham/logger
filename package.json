@@ -1,6 +1,6 @@
 {
     "name": "@sudonyms/logger",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "A simple, lightweight console logger with basic formatting capabilities.",
     "main": "./lib/index.js",
     "types": "./lib/index.d.ts",
@@ -30,7 +30,5 @@
         "ts-node": "^10.9.2",
         "typescript": "^5.5.2"
     },
-    "dependencies": {
-        
-    }
+    "dependencies": {}
 }
