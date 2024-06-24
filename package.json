@@ -30,6 +30,6 @@
         "typescript": "^5.5.2"
     },
     "dependencies": {
-        "ansi-colors": "^4.1.3"
+        
     }
 }
