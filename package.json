@@ -7,7 +7,10 @@
     "files": [
         "./lib/index.js",
         "./lib/index.d.ts",
-        "./lib/index.js.map"
+        "./lib/index.js.map",
+        "./lib/ansi-colors.js",
+        "./lib/ansi-colors.d.ts",
+        "./lib/ansi-colors.js.map"
     ],
     "scripts": {
         "test": "npm run build && jest",
