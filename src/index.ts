@@ -1,4 +1,4 @@
-import colors from "ansi-colors";
+import { AnsiConsoleCodes, style } from "./ansi-colors";
 import * as util from 'util';
 
 type LogMessage = string | object;
@@ -8,7 +8,10 @@ const INFO = "info";
 const WARNING = "warning";
 const ERROR = "error";
 
-const REGEX_FORMAT_QUOTES = /(?:(\"|\')(.*?[^\\\\])\1)/g;
+const {  Bold, Red, Green, Yellow, Blue, Magenta } = AnsiConsoleCodes;
+
+const REGEX_SINGLE_QUOTES = /('(?:[^'\\]|(?:\\\\)|(?:\\\\)*\\.{1})*')/g;
+const REGEX_DOUBLE_QUOTES = /("(?:[^"\\]|(?:\\\\)|(?:\\\\)*\\.{1})*")/g;
 
 enum LogType {
     Info = INFO,
@@ -25,14 +28,18 @@ const CONSOLE_FUNCS = {
 
 /** Map of style functions that will style the prefix prepended to messages sent to the console output. */
 const PREFIX_STYLES = {
-    [LogType.Info]: colors.bold.blue,
-    [LogType.Warning]: colors.bold.yellow,
-    [LogType.Error]: colors.bold.red
+    [LogType.Info]: (text: string) => { return style(text, Blue, Bold) },
+    [LogType.Warning]: (text: string) => { return style(text, Yellow, Bold) },
+    [LogType.Error]: (text: string) => { return style(text, Red, Bold) }
 }
 
 const styleQuotes = (message: string) => {
-    return message.replace(REGEX_FORMAT_QUOTES, (message: string) => {
-        return colors.green(message).replace(/\\'/, "'");
+    let temp: string = message.replace(REGEX_SINGLE_QUOTES, (message: string) => {
+        return style(message, Magenta);
+    });
+
+    return temp.replace(REGEX_DOUBLE_QUOTES, (message: string) => {
+        return style(message, Green);
     });
 };
 
@@ -61,7 +68,7 @@ class Logger {
             this._spy(util.format(message, ...args));
 
             // Just for fun...
-            console.log(`${p_style(this.prefix)} Caller is spying! 🥸`);
+            //console.log(`${p_style(this.prefix)} Caller is spying! 🥸`);
         }
         c_func(output, ...args);
     }
