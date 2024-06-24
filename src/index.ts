@@ -10,8 +10,8 @@ const ERROR = "error";
 
 const {  Bold, Red, Green, Yellow, Blue, Magenta } = AnsiConsoleCodes;
 
-const REGEX_SINGLE_QUOTES = /('(?:[^'\\]|(?:\\\\)|(?:\\\\)*\\.{1})*')/g;
-const REGEX_DOUBLE_QUOTES = /("(?:[^"\\]|(?:\\\\)|(?:\\\\)*\\.{1})*")/g;
+const REGEX_SINGLE_QUOTES = /'([^'\\]|\\.)*'/gus;
+const REGEX_DOUBLE_QUOTES = /"([^"\\]|\\.)*"/gus;
 
 enum LogType {
     Info = INFO,
@@ -34,13 +34,13 @@ const PREFIX_STYLES = {
 }
 
 const styleQuotes = (message: string) => {
-    let temp: string = message.replace(REGEX_SINGLE_QUOTES, (message: string) => {
-        return style(message, Magenta);
-    });
-
-    return temp.replace(REGEX_DOUBLE_QUOTES, (message: string) => {
+    return message.replace(REGEX_DOUBLE_QUOTES, (message: string) => {
         return style(message, Green);
     });
+
+    // return temp.replace(REGEX_DOUBLE_QUOTES, (message: string) => {
+    //     return style(message, Green);
+    // });
 };
 
 const DEFAULT_PREFIX = "Sudonyms.io Logger";
@@ -126,3 +126,4 @@ const logger = (prefix: string = DEFAULT_PREFIX) => {
 };
 
 export default logger;
+
