@@ -13,7 +13,8 @@
         "test": "npm run build && jest",
         "build": "npm run clean && tsc",
         "clean": "rm -rf ./lib",
-        "dev": "tsc --watch"
+        "dev": "tsc --watch",
+        "link": "npm run build && npm link"
     },
     "author": "TylerDurhamTN <npmjs.runt621@passmail.net> (https://github.com/TylerDurham)",
     "repository": "TylerDurham/logger",
