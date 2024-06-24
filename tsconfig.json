@@ -3,7 +3,7 @@
    
     /* Language and Environment */
     "resolveJsonModule": true,
-    "target": "ES6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "ES2018" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "rootDir": "./src",
     "declaration": true,
     /* Modules */
